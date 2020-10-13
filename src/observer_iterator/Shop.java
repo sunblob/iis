@@ -33,10 +33,7 @@ public class Shop implements Observed, Collection {
 
     @Override
     public void addObserver(Observer o) {
-        Buyer buyer = (Buyer) o;
-        if (buyer.wantsToBeNotified) {
             observers.add(o);
-        }
     }
 
     @Override

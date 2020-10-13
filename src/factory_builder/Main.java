@@ -13,9 +13,6 @@ public class Main {
 
         product.printInfo();
 
-        Product product2 = Product.create().setDescription(":))))").build();
-        product2.printInfo();
-
         Shop shop = Shop.create("My shop");
         shop.printInfo();
         shop.addProduct(product);
