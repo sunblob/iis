@@ -2,19 +2,14 @@ package ioc
 
 class Network(var service: Service? = null) {
 
-    fun doRequest(request: Request) {
-        request.apiCall(request.url)
+    fun makeRequest(request: Request) {
         service?.doServiceWork(request)
     }
 
-    enum class HttpType {
+    enum class HttpMethod {
         GET, POST, PUT, DELETE
     }
 
-    class Request(val url: String, val method: HttpType = HttpType.GET) {
-
-        fun apiCall(url: String) {
-            println("Performing request... $url")
-        }
+    class Request(val url: String, val method: HttpMethod = HttpMethod.GET) {
     }
 }
