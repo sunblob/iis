@@ -10,6 +10,39 @@ public class WebsiteTeamLead implements TeamLead {
 
     private WebsiteTeamLead() {}
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
+
+    public void setYearsOfExperience(int yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    @Override
+    public String toString() {
+        return "WebsiteTeamLead{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", yearsOfExperience=" + yearsOfExperience +
+                '}';
+    }
+
     @Override
     public void manageTeam() {
         System.out.println("Managing team for a website studio...");

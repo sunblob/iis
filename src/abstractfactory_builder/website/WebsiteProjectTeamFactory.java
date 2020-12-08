@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 public class WebsiteProjectTeamFactory implements ProjectTeamFactory {
     @Override
-    public Developer getDeveloper() {
+    public Developer createDeveloper() {
         return WebsiteDeveloper.Builder.create()
                 .setFirstName("Артем")
                 .setLastName("Кеков")
@@ -17,7 +17,7 @@ public class WebsiteProjectTeamFactory implements ProjectTeamFactory {
     }
 
     @Override
-    public Tester getTester() {
+    public Tester createTester() {
         return WebsiteTester.Builder.create()
                 .setFirstName("Дима")
                 .setLastName("Митрохин")
@@ -26,7 +26,7 @@ public class WebsiteProjectTeamFactory implements ProjectTeamFactory {
     }
 
     @Override
-    public TeamLead getTeamLead() {
+    public TeamLead createTeamLead() {
         return WebsiteTeamLead.Builder.create().setFirstName("Егор").setLastName("Крутов").setYearsOfExperience(10).build();
     }
 }

@@ -13,6 +13,48 @@ public class WebsiteTester implements Tester {
 
     private WebsiteTester() {}
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public int getYearsOfExperience() {
+        return yearsOfExperience;
+    }
+
+    public void setYearsOfExperience(int yearsOfExperience) {
+        this.yearsOfExperience = yearsOfExperience;
+    }
+
+    public List<String> getSkills() {
+        return skills;
+    }
+
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
+    }
+
+    @Override
+    public String toString() {
+        return "WebsiteTester{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", yearsOfExperience=" + yearsOfExperience +
+                ", skills=" + skills +
+                '}';
+    }
+
     @Override
     public void writeTest() {
         System.out.println("Writing tests for a website studio...");
